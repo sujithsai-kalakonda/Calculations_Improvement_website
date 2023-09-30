@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Math Challenge</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Math Challenge</h1>
+        <div id="config">
+            <label>Operator:</label>
+            <div id="operatorButtons">
+                <button onclick="selectOperator('+')">+</button>
+                <button onclick="selectOperator('-')">-</button>
+                <button onclick="selectOperator('*')">*</button>
+                <button onclick="selectOperator('/')">/</button>
+            </div>
+            <p>Selected Operator: <span id="selectedOperator">None</span></p>
+						
+            <label for="numDigits">Number of Digits for Each Number:</label>
+            <input type="number" id="numDigits" placeholder="Digits"><br>
+
+            <label for="numQuestions">Number of Equations:</label>
+            <input type="number" id="numQuestions" placeholder="Equations"><br>
+            <button id="startButton" onclick="startChallenge()">Start Challenge</button>
+        </div>
+        <div id="challenge" style="display: none;">
+					<div id="question"></div>
+					<input type="text" id="userAnswer" placeholder="Enter your answer">
+					<button id="submit" onclick="checkAnswer()">Submit</button>
+					<div id="feedback-container" class="feedback-container">
+						<img id="correct" src="check-mark.png" alt="Correct Image" class="feedback-img">
+						<img id="incorrect" src="cancel.png" alt="Wrong Image" class="feedback-img">
+						<div id="answer-display" class="answer-display"></div>
+					</div>
+					<button id="next" onclick="generateNextQuestion()">Next Question</button>
+					<button id="exit" onclick="exitChallenge()">Exit</button>
+					<div id="result"></div>
+					<div id="feedback"></div> <!--Add this line-->
+			</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
