@@ -1,5 +1,5 @@
 body {
-	background-color: #f0f0f0;
+	/* background-color: #f0f0f0; */
 	font-family: Arial, sans-serif;
 	text-align: center;
 	display: flex;
@@ -7,14 +7,17 @@ body {
 	align-items: center;
 	height: 100vh;
 	margin: 0;
+	background: #222;
 }
 
 .container {
-	background-color: #fff;
+	/* background-color: #fff; */
 	border-radius: 8px;
 	box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
 	padding: 50px;
 	width: 400px;
+	background: rgb(2, 0, 36);
+	background: linear-gradient(90deg, rgb(51 118 150) 0%, rgba(157, 198, 218, 1) 42%, rgba(0, 212, 255, 1));
 }
 
 button {
@@ -24,6 +27,7 @@ button {
 	padding: 8px 16px;
 	margin-top: 10px;
 	cursor: pointer;
+	border-radius: 5px;
 }
 
 button:hover {
@@ -32,6 +36,47 @@ button:hover {
 
 button:active {
 	background-color: #0056b3;
+	/* Change to the desired color when clicked */
+}
+
+#question {
+	font-weight: bold;
+	font-size: 2.5em;
+}
+
+.operatorButtons-container {
+	display: flex;
+	flex-wrap: wrap;
+	/* Allow buttons to wrap to the next row */
+	justify-content: center;
+	/* Center the buttons horizontally */
+	margin-bottom: 0px;
+}
+
+#operatorButtons button {
+	background-color: rgb(13 90 158);
+	/* Change to the desired background color */
+	color: white;
+	/* Change to the desired text color */
+	width: 10%;
+	/* Distribute buttons equally in three columns */
+	box-sizing: border-box;
+	/* Include padding and border in the width */
+	padding: 10px;
+	/* Adjust padding as needed */
+	margin: 8px;
+	/* Add some margin between buttons */
+	cursor: pointer;
+	font-size: 20px;
+	border-radius: 5px;
+}
+
+#operatorButtons button:hover {
+	background-color: #1587bf;
+}
+
+#operatorButtons button:active {
+	background-color: rgb(24 105 138);
 	/* Change to the desired color when clicked */
 }
 
@@ -66,6 +111,7 @@ input {
 	margin: 5px;
 	/* Add some margin between buttons */
 	cursor: pointer;
+	border-radius: 5px;
 }
 
 #keypad button:hover {
@@ -81,8 +127,9 @@ input {
 
 /* Input field styling */
 #userAnswer {
-	padding: 6px;
-	width: 100%;
+	padding: 10px;
+	width: 95%;
+	margin: 0px auto;
 	margin-bottom: 10px;
 }
 
@@ -91,7 +138,7 @@ input {
 .feedback-container {
 	position: absolute;
 	top: 90%;
-	left: 60%;
+	left: 67%;
 	transform: translate(-10%, -70%);
 	text-align: top;
 }
