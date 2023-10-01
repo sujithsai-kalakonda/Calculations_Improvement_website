@@ -65,6 +65,8 @@ function showFeedback(imageSrc, className) {
 
 
 function generateNextQuestion() {
+	appendedAnswer = ''; // make the input value empty
+	
 	// Clear the answer display
 	const answerDisplay = document.getElementById('answer-display');
 	answerDisplay.innerHTML = '';
