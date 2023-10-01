@@ -36,7 +36,51 @@ input {
 	margin-bottom: 10px;
 }
 
-/* ... (your existing CSS styles) */
+/* Keypad container styling */
+.keypad-container {
+	display: flex;
+	flex-wrap: wrap;
+	/* Allow buttons to wrap to the next row */
+	justify-content: center;
+	/* Center the buttons horizontally */
+	margin-bottom: 10px;
+}
+
+/* Keypad buttons styling */
+#keypad button {
+	background-color: rgb(123, 125, 125);
+	/* Change to the desired background color */
+	color: white;
+	/* Change to the desired text color */
+	width: 30%;
+	/* Distribute buttons equally in three columns */
+	box-sizing: border-box;
+	/* Include padding and border in the width */
+	padding: 10px;
+	/* Adjust padding as needed */
+	margin: 5px;
+	/* Add some margin between buttons */
+	cursor: pointer;
+}
+
+#keypad button:hover {
+	background-color: #a8b7b7;
+}
+
+/* Add a style for when the button is clicked */
+#keypad button:active {
+	background-color: rgb(63, 65, 65);
+	/* Change to the desired color when clicked */
+}
+
+
+/* Input field styling */
+#userAnswer {
+	padding: 6px;
+	width: 100%;
+	margin-bottom: 10px;
+}
+
 
 /* Feedback container styling */
 .feedback-container {
@@ -78,9 +122,4 @@ input {
 	opacity: 0;
 	transition: opacity 1s ease-in-out;
 	display: inline-block; /* Allow the element to size itself */
-}
-
-#challenge img{
-	height: 120px;
-	width: 120px;
 }
