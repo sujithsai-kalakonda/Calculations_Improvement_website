@@ -14,8 +14,8 @@
 			<div id="operatorButtons">
 				<button onclick="selectOperator('+')">+</button>
 				<button onclick="selectOperator('-')">-</button>
-				<button onclick="selectOperator('*')">*</button>
-				<button onclick="selectOperator('/')">/</button>
+				<button onclick="selectOperator('x')">x</button>
+				<button onclick="selectOperator('÷')">÷</button>
 			</div>
 			<p>Selected Operator: <span id="selectedOperator">None</span></p>
 
@@ -29,9 +29,9 @@
 
 		<div id="challenge" style="display: none;">
 			<div id="question"></div>
+			<br>
 
 			<input type="text" id="userAnswer" placeholder="Enter your answer">
-			<br>
 			<!-- Add the keypad container -->
 			<div id="keypad">
 				<button onclick="appendToAnswer('1')">1</button>
@@ -45,6 +45,7 @@
 				<button onclick="appendToAnswer('9')">9</button>
 				<button onclick="appendToAnswer('0')">0</button>
 				<button onclick="appendToAnswer('.')">.</button>
+				<button onclick="appendToAnswer('C')">C</button>
 			</div>
 
 			<button id="submit" onclick="checkAnswer()">Submit</button>
