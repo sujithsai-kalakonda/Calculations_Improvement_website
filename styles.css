@@ -93,7 +93,7 @@ input {
 	top: 90%;
 	left: 60%;
 	transform: translate(-10%, -70%);
-	text-align: center;
+	text-align: top;
 }
 
 /* Feedback styling */
