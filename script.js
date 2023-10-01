@@ -3,6 +3,8 @@ let numDigits;
 let numQuestions;
 let currentQuestion;
 
+let appendedAnswer = ''; // This stores the value of keyn entered by the user.
+
 function generateRandomNumber(digits) {
     const min = Math.pow(10, digits - 1);
     const max = Math.pow(10, digits) - 1;
@@ -36,7 +38,7 @@ function displayCorrectAnswer(answer) {
 }
 
 function checkAnswer() {
-	const userAnswer = parseFloat(document.getElementById('userAnswer').value);
+	const userAnswer = parseFloat(appendedAnswer); // Use the appended answer
 
 	if (userAnswer === currentQuestion.answer) {
 			showFeedback('check-mark.png', 'correct'); // Use the tick image
@@ -97,8 +99,14 @@ function startChallenge() {
     currentQuestion = generateQuestion();
     document.getElementById('question').innerHTML = currentQuestion.questionText;
 
+    appendedAnswer = '';
+    
     document.getElementById('config').style.display = 'none';
     document.getElementById('challenge').style.display = 'block';
+
+    // Show the keypad and the input field
+    document.getElementById('keypad').style.display = 'block';
+    document.getElementById('userAnswer').style.display = 'block';
 }
 
 function selectOperator(selectedOperator) {
@@ -111,3 +119,10 @@ function selectOperator(selectedOperator) {
 	const selectedButton = Array.from(operatorButtons).find(button => button.innerText === selectedOperator);
 	selectedButton.classList.add('selected');
 }
+
+function appendToAnswer(character) {
+	appendedAnswer += character;
+	var inputField = document.getElementById('userAnswer');
+	inputField.value = appendedAnswer;
+}
+
