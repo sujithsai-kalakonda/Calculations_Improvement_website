@@ -65,8 +65,6 @@ function showFeedback(imageSrc, className) {
 
 
 function generateNextQuestion() {
-	appendedAnswer = ''; // make the input value empty
-	
 	// Clear the answer display
 	const answerDisplay = document.getElementById('answer-display');
 	answerDisplay.innerHTML = '';
@@ -86,6 +84,7 @@ function generateNextQuestion() {
 	currentQuestion = generateQuestion();
 	document.getElementById('question').innerHTML = currentQuestion.questionText;
 	document.getElementById('userAnswer').value = '';
+	appendedAnswer = ''; // make the input value empty
 	document.getElementById('result').innerHTML = '';
 }
 
