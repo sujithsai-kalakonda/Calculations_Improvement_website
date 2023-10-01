@@ -84,7 +84,7 @@ function generateNextQuestion() {
 	currentQuestion = generateQuestion();
 	document.getElementById('question').innerHTML = currentQuestion.questionText;
 	document.getElementById('userAnswer').value = '';
-	appendedAnswer = ''; // make the input value empty
+	appendedAnswer = ''; // make the input value empty string
 	document.getElementById('result').innerHTML = '';
 }
 
