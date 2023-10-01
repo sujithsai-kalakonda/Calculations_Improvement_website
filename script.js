@@ -38,7 +38,7 @@ function displayCorrectAnswer(answer) {
 }
 
 function checkAnswer() {
-	const userAnswer = parseFloat(appendedAnswer); // Use the appended answer
+	const userAnswer = parseFloat(appendedAnswer) || parseFloat(document.getElementById('userAnswer').value); // Use the appended answer or value entered in the box
 
 	if (userAnswer === currentQuestion.answer) {
 		showFeedback('check-mark.png', 'correct'); // Use the tick image
