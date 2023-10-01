@@ -100,6 +100,7 @@ function startChallenge() {
 	currentQuestion = generateQuestion();
 	document.getElementById('question').innerHTML = currentQuestion.questionText;
 
+	document.getElementById('userAnswer').value = ''; // making the input value empty at starting of the challenge
 	appendedAnswer = '';
 
 	document.getElementById('config').style.display = 'none';
