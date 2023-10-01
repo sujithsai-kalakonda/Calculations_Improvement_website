@@ -27,6 +27,21 @@
         <div id="challenge" style="display: none;">
 					<div id="question"></div>
 					<input type="text" id="userAnswer" placeholder="Enter your answer">
+					<br>
+					<!-- Add the keypad container -->
+					<div id="keypad">
+						<button onclick="appendToAnswer('1')">1</button>
+						<button onclick="appendToAnswer('2')">2</button>
+						<button onclick="appendToAnswer('3')">3</button>
+						<button onclick="appendToAnswer('4')">4</button>
+						<button onclick="appendToAnswer('5')">5</button>
+						<button onclick="appendToAnswer('6')">6</button>
+						<button onclick="appendToAnswer('7')">7</button>
+						<button onclick="appendToAnswer('8')">8</button>
+						<button onclick="appendToAnswer('9')">9</button>
+						<button onclick="appendToAnswer('0')">0</button>
+						<button onclick="appendToAnswer('.')">.</button>
+					</div>
 					<button id="submit" onclick="checkAnswer()">Submit</button>
 					<div id="feedback-container" class="feedback-container">
 						<img id="correct" src="check-mark.png" alt="Correct Image" class="feedback-img">
