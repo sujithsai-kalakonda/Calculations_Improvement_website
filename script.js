@@ -30,6 +30,7 @@ function generateQuestion() {
 function displayCorrectAnswer(answer) {
 	const answerDisplay = document.getElementById('answer-display');
 	answerDisplay.textContent = `Correct Answer: ${answer}`;
+	answerDisplay.style.color = 'green'; // Change to the desired color
 	answerDisplay.style.opacity = '1';
 
 	setTimeout(() => {
@@ -84,7 +85,7 @@ function generateNextQuestion() {
 	currentQuestion = generateQuestion();
 	document.getElementById('question').innerHTML = currentQuestion.questionText;
 	document.getElementById('userAnswer').value = '';
-	appendedAnswer = ''; // make the input value empty string
+	appendedAnswer = ''; // make the input value empty
 	document.getElementById('result').innerHTML = '';
 }
 
@@ -100,7 +101,7 @@ function startChallenge() {
 	currentQuestion = generateQuestion();
 	document.getElementById('question').innerHTML = currentQuestion.questionText;
 
-	document.getElementById('userAnswer').value = ''; // making the input value empty at starting of the challenge
+	document.getElementById('userAnswer').value = '';
 	appendedAnswer = '';
 
 	document.getElementById('config').style.display = 'none';
@@ -112,6 +113,12 @@ function startChallenge() {
 }
 
 function selectOperator(selectedOperator) {
+	if(selectOperator === 'x'){
+		selectOperator = '*';
+	}
+	else if(selectOperator === '÷'){
+		selectOperator = '/'
+	}
 	operator = selectedOperator;
 	document.getElementById('selectedOperator').innerHTML = selectedOperator;
 
@@ -123,7 +130,13 @@ function selectOperator(selectedOperator) {
 }
 
 function appendToAnswer(character) {
-	appendedAnswer += character;
+	if(character === 'C'){
+		appendedAnswer = '';
+	}
+	else{
+		appendedAnswer += character;
+	}
+
 	var inputField = document.getElementById('userAnswer');
 	inputField.value = appendedAnswer;
 }
